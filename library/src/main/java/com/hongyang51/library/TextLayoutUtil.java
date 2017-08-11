@@ -1,14 +1,14 @@
-package com.jaeger.library;
+package com.hongyang51.library;
 
 import android.content.Context;
 import android.text.Layout;
 import android.widget.TextView;
 
 /**
- * Created by Jaeger on 16/8/31.
- *
- * Email: chjie.jaeger@gmail.com
- * GitHub: https://github.com/laobie
+ * Created by 谢彦斌 on 2017/8/11.
+ * 修改时间:
+ * 版本号: 1.0.0
+ * 修改人:
  */
 public class TextLayoutUtil {
 
@@ -73,8 +73,8 @@ public class TextLayoutUtil {
         // If new line is just before or after previous line and y position is less than
         // hysteresisThreshold away from previous line, keep cursor on previous line.
         if (((line == previousLine + 1) && ((y - previousLineBottom) < hysteresisThreshold)) || ((line == previousLine - 1) && ((
-            previousLineTop
-                - y) < hysteresisThreshold))) {
+                previousLineTop
+                        - y) < hysteresisThreshold))) {
             line = previousLine;
         }
 

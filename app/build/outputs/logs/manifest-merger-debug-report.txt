@@ -16,7 +16,7 @@ ADDED from /Users/mac/Desktop/TextCustomFreeCopy/app/src/main/AndroidManifest.xm
 application
 ADDED from /Users/mac/Desktop/TextCustomFreeCopy/app/src/main/AndroidManifest.xml:5:5-19:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/mac/.android/build-cache/9cdc9e79990a1f9a02cbd904968edfef2d48a5e3/output/AndroidManifest.xml:9:5-20
-MERGED from [TextCustomFreeCopy:library:unspecified] /Users/mac/Desktop/TextCustomFreeCopy/library/build/intermediates/bundles/default/AndroidManifest.xml:11:5-15:19
+MERGED from [TextCustomFreeCopy:library:unspecified] /Users/mac/Desktop/TextCustomFreeCopy/library/build/intermediates/bundles/default/AndroidManifest.xml:11:5-14:19
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/mac/.android/build-cache/cc5e5288b9bc2f648f159448f4e95ba1f7968b80/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-v4:25.3.1] /Users/mac/.android/build-cache/0615f6cefabb27f84bb544fe0f2ff183d7c448a2/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] /Users/mac/.android/build-cache/b587f07750b40451cfd8a76d60c7756543692621/output/AndroidManifest.xml:29:5-20

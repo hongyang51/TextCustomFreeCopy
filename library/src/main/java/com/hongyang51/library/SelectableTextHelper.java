@@ -1,4 +1,4 @@
-package com.jaeger.library;
+package com.hongyang51.library;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -21,10 +21,10 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 /**
- * Created by Jaeger on 16/8/30.
- * <p>
- * Email: chjie.jaeger@gmail.com
- * GitHub: https://github.com/laobie
+ * Created by 谢彦斌 on 2017/8/11.
+ * 修改时间:
+ * 版本号: 1.0.0
+ * 修改人:
  */
 public class SelectableTextHelper {
 

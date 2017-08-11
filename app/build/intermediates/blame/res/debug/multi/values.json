@@ -5065,11 +5065,11 @@
                 "from": {
                     "file": "/Users/mac/Desktop/TextCustomFreeCopy/library/build/intermediates/bundles/default/res/values/values.xml",
                     "position": {
-                        "startLine": 10,
+                        "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 411,
+                        "startOffset": 366,
                         "endColumn": 35,
-                        "endOffset": 442
+                        "endOffset": 397
                     }
                 }
             },
@@ -5103,11 +5103,11 @@
                 "from": {
                     "file": "/Users/mac/Desktop/TextCustomFreeCopy/library/build/intermediates/bundles/default/res/values/values.xml",
                     "position": {
-                        "startLine": 11,
+                        "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 447,
+                        "startOffset": 402,
                         "endColumn": 41,
-                        "endOffset": 484
+                        "endOffset": 439
                     }
                 }
             },
@@ -5122,11 +5122,11 @@
                 "from": {
                     "file": "/Users/mac/Desktop/TextCustomFreeCopy/library/build/intermediates/bundles/default/res/values/values.xml",
                     "position": {
-                        "startLine": 12,
+                        "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 489,
+                        "startOffset": 444,
                         "endColumn": 38,
-                        "endOffset": 523
+                        "endOffset": 478
                     }
                 }
             },
@@ -8080,12 +8080,12 @@
                 "from": {
                     "file": "/Users/mac/Desktop/TextCustomFreeCopy/library/build/intermediates/bundles/default/res/values/values.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 528,
-                        "endLine": 22,
+                        "startOffset": 483,
+                        "endLine": 21,
                         "endColumn": 12,
-                        "endOffset": 1023
+                        "endOffset": 978
                     }
                 }
             },
