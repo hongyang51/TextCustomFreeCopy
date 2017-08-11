@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#6e6e6e</color>
+    <color name="colorPrimaryDark">#505050</color>
+    <color name="gray">#c1c1c1</color>
+    <color name="text_dark">#454545</color>
+    <color name="text_gray">#888888</color>
+    <color name="white">#ffffff</color>
+    <string name="app_name">library</string>
+    <string name="copy">复制</string>
+    <string name="select_all">全选</string>
+    <string name="share">金句分享</string>
+    <style name="OperateTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>
