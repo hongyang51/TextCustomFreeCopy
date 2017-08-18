@@ -53,7 +53,15 @@ public class SelectableTextHelper {
     private boolean isHide = true;
     private View.OnClickListener onClickListener;
     private OnShareClickListener onShareClickListener;
+    private OnWriteNoteClickListener onWriteNoteClickListener;
 
+    public OnWriteNoteClickListener getOnWriteNoteClickListener() {
+        return onWriteNoteClickListener;
+    }
+
+    public void setOnWriteNoteClickListener(OnWriteNoteClickListener onWriteNoteClickListener) {
+        this.onWriteNoteClickListener = onWriteNoteClickListener;
+    }
 
     private ViewTreeObserver.OnPreDrawListener mOnPreDrawListener;
     ViewTreeObserver.OnScrollChangedListener mOnScrollChangedListener;
@@ -296,6 +304,12 @@ public class SelectableTextHelper {
         }
     }
 
+    public void showWrite() {
+        if (mOperateWindow != null) {
+            mOperateWindow.showWrite();
+        }
+    }
+
     public void setSelectListener(OnSelectListener selectListener) {
         mSelectListener = selectListener;
     }
@@ -361,6 +375,19 @@ public class SelectableTextHelper {
 
                 }
             });
+
+            contentView.findViewById(R.id.tv_write_note).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onWriteNoteClickListener != null) {
+                        onWriteNoteClickListener.writeNoteContent(mSelectionInfo.mSelectionContent);
+                    }
+                    SelectableTextHelper.this.resetSelectionInfo();
+                    SelectableTextHelper.this.hideSelectView();
+
+
+                }
+            });
             contentView.findViewById(R.id.tv_select_all_01).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -397,6 +424,12 @@ public class SelectableTextHelper {
         public boolean isShowing() {
             return mWindow.isShowing();
         }
+
+        public void showWrite() {
+            View contentView = mWindow.getContentView();
+            contentView.findViewById(R.id.tv_write_note).setVisibility(View.VISIBLE);
+        }
+
     }
 
     private class CursorHandle extends View {

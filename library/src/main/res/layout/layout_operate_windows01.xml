@@ -20,5 +20,10 @@
         android:id="@+id/tv_select_share"
         android:text="@string/share"
         style="@style/OperateTextView"/>
+    <TextView
+        android:id="@+id/tv_write_note"
+        android:text="@string/write_note"
+        android:visibility="gone"
+        style="@style/OperateTextView"/>
 
 </LinearLayout>
