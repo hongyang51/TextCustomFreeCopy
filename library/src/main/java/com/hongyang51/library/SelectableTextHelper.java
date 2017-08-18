@@ -11,6 +11,7 @@ import android.text.Layout;
 import android.text.Spannable;
 import android.text.Spanned;
 import android.text.style.BackgroundColorSpan;
+import android.text.style.ClickableSpan;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -81,7 +82,6 @@ public class SelectableTextHelper {
             @Override
             public boolean onLongClick(View v) {
                 showSelectView(mTouchX, mTouchY);
-//                ViewParent parent = mTextView.getParent();
                 mTextView.requestFocus();
                 return true;
             }
@@ -91,6 +91,39 @@ public class SelectableTextHelper {
             public boolean onTouch(View v, MotionEvent event) {
                 mTouchX = (int) event.getX();
                 mTouchY = (int) event.getY();
+
+                int action = event.getAction();
+
+                if (v instanceof TextView) {
+                    TextView widget = (TextView) v;
+                    CharSequence text = widget.getText();
+                    Spannable spannable = Spannable.Factory.getInstance().newSpannable(text);
+                    if (action == MotionEvent.ACTION_UP ||
+                            action == MotionEvent.ACTION_DOWN) {
+                        int x = (int) event.getX();
+                        int y = (int) event.getY();
+
+                        x -= widget.getTotalPaddingLeft();
+                        y -= widget.getTotalPaddingTop();
+
+                        x += widget.getScrollX();
+                        y += widget.getScrollY();
+
+                        Layout layout = widget.getLayout();
+                        int line = layout.getLineForVertical(y);
+                        int off = layout.getOffsetForHorizontal(line, x);
+
+                        ClickableSpan[] link = spannable.getSpans(
+                                off, off, ClickableSpan.class);
+                        if (link.length != 0) {
+                            if (action == MotionEvent.ACTION_UP) {
+                                link[0].onClick(widget);
+                            }
+                            return true;
+                        }
+                    }
+                }
+
                 return false;
             }
         });
@@ -322,7 +355,6 @@ public class SelectableTextHelper {
                     if (onShareClickListener != null) {
                         onShareClickListener.shareContent(mSelectionInfo.mSelectionContent);
                     }
-//                    Toast.makeText(context, mSelectionInfo.mSelectionContent, Toast.LENGTH_SHORT).show();
                     SelectableTextHelper.this.resetSelectionInfo();
                     SelectableTextHelper.this.hideSelectView();
 
